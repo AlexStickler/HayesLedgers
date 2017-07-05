@@ -1,0 +1,13 @@
+/* Style you'll see on every page */
+* {
+	font-family: arial;
+	border: 1px solid rgb(1, 1, 1);
+}
+
+.header {
+	text-align: center;
+}
+
+.navbar {
+	text-align: center;
+}
