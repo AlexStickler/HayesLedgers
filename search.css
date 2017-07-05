@@ -1,0 +1,25 @@
+/* Style you'll see on every page */
+* {
+	font-family: arial;
+	border: 1px solid rgb(1, 1, 1);
+}
+
+.header {
+	text-align: center;
+	position: fixed;
+	left: 50%;
+}
+
+.navbar {
+	text-align: center;
+	position: fixed;
+}
+
+#nav1, #nav2, #nav3, #nav4 {
+	float: left;
+}
+
+/* Stye for search.html */
+.searchtool {
+
+}
