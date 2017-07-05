@@ -6,20 +6,13 @@
 
 .header {
 	text-align: center;
-	position: fixed;
-	left: 50%;
 }
 
 .navbar {
 	text-align: center;
-	position: fixed;
 }
 
-#nav1, #nav2, #nav3, #nav4 {
-	float: left;
-}
-
-/* Stye for search.html */
-.searchtool {
-
+/* Style for sresults.css */
+.restable {
+	text-align: center;
 }
