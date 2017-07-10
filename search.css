@@ -1,25 +1,116 @@
 /* Style you'll see on every page */
 * {
-	font-family: arial;
-	border: 1px solid rgb(1, 1, 1);
+	font-family: helvetica, arial, sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-.header {
-	text-align: center;
+body {
+	background-color: #fffff0;
+}
+header {
 	position: fixed;
-	left: 50%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #b22222;
 }
 
-.navbar {
+main {
+	margin-top: 180px;
+	width: inherit;
+}
+
+#banner {
+	text-shadow: 2px 2px 2px #444;
+	-webkit-text-shadow: 2px 2px 2px #444;
 	text-align: center;
-	position: fixed;
+	color: #fff;
 }
 
-#nav1, #nav2, #nav3, #nav4 {
+#banner h1 {
+	margin: 20px auto;
+}
+
+#banner h3 {
+	margin: 20px auto;
+}
+
+#navbar ul {
+	list-style-type: none;
+	margin: auto;
+	padding: 0;
+	overflow: hidden;
+	background-color: #444;
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+#navbar ul li {
 	float: left;
+	box-sizing: border-box;
+	border-right: 1px solid #bbb;
+	width: 25%;
+}
+
+#navbar ul li:last-child {
+	border-right: none;
+}
+
+#navbar ul li a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 14px 0;
+	text-decoration: none;
+
+    transition-property: all;
+	transition-duration: .5s;
+	-webkit-transition: all .5s;
+	-moz-transition-property: all;
+	-moz-transition-duration: .5s;
+	-o-transition-property: all;
+	-o-transition-duration: .5s;
+}
+
+/* Hovering over any link will cause the font to become bold */
+#navbar ul li a:hover {
+	font-weight: bold;
+}
+
+/* Hovering over a non-active link will cause it to turn black */
+#navbar ul li a:hover:not(.active) {
+	background-color: #333;
+}
+
+/* The active link will be red */
+.active {
+	background-color: #b22222;
 }
 
 /* Stye for search.html */
-.searchtool {
+#searchtool {
+	margin-left: 15px;
+	width: 100%;
+}
 
+#searchtool p {
+	line-height: 20px;
+	font-style: italic;
+}
+
+#searchtool input, button {
+	margin: 5px auto;
+}
+
+#searchtool button {
+	padding: 3.5px;
+	cursor: pointer;
+}
+
+#instructions {
+	margin-bottom: 15px;
+	width: 100%;
 }

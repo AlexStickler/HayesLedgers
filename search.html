@@ -2,35 +2,39 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
   <title>Hayes Funeral Home Ledgers</title>
-  <div class="header">
-    <!-- Header that you'll see on every page -->
-    <h1>HAYES FUNERAL HOME LEDGERS</h1>
-    <h2>(1902) - (1950)</h2>
-  </div>
   <!-- Link to the search page stylesheet -->
   <link href="search.css" type="css/text" rel="stylesheet"/>
 </head>
 
 <body>
   <header>
-  <br><br><br><br><br><br><br><br><br><br>
-    <div class="navbar">
-      <nav>
-        <!-- Navigation bar that you'll see on every page -->
-        <h2 id="nav1"><a href="search.html">Search</a></h2>
-        <h2 id="nav2"><a href="browse.html">Browse</a></h2>
-        <h2 id="nav3"><a href="explore.html">Explore</a></h2>
-        <h2 id="nav4"><a href="map.html">Map</a></h2>
-      </nav>
+    <div id="banner">
+      <!-- Header that you'll see on every page -->
+      <h1>HAYES FUNERAL HOME LEDGERS</h1>
+      <h3>(1902) - (1950)</h3>
     </div>
-  <br><br><br><br><br><br><br><br><br><br>
+    <nav id="navbar">
+    <!-- Navigation bar that you'll see on every page -->
+    <!-- Note which link is given the class "active" -->
+      <ul>
+        <li><a class="active" href="search.html">Search</a></li>
+        <li><a href="#">Browse</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Map</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <div class="searchtool">
+    <div id="searchtool">
     <!-- Search tool -->
       <form action="search.php" method="get">
+      	<div id="instructions">
+          <p>Fill in at least one of the following search boxes to search through the database.</p>
+          <p>Fill in additional boxes to refine your search.</p>
+        </div>
         <label for="firstname">Name: </label>
         <input type="search" name="firstname" placeholder="First" autofocus>
         <label for="middlename"></label>
@@ -54,31 +58,30 @@
         <br>
         <label for="occupation">Occupation: </label>
         <input type="search" name="occupation" placeholder="" autofocus>
-        <br>  
+        <br>
         <label for="dateonledger">Date on ledger: </label>
         <input type="search" name="dateonledger" placeholder="" autofocus>
-        <br>   
+        <br> 
         <label for="maritalstatus">Marital status: </label>
         <input type="search" name="maritalstatus" placeholder="" autofocus>
-        <br> 
+        <br>
         <label for="locationofdeath">Location of death: </label>
         <input type="search" name="locationofdeath" placeholder="" autofocus>
-        <br>    
+        <br>
         <label for="chargedto">Funeral costs charged to: </label>
         <input type="search" name="chargedto" placeholder="" autofocus>
-        <br>    
+        <br>   
         <label for="howpayment">How payment was made: </label>
         <input type="search" name="howpayment" placeholder="" autofocus>
         <br>
         <label for="nameofphysician">Name of physician: </label>
         <input type="search" name="nameofphysician" placeholder="" autofocus>
-        <br>  
+        <br>
         <label for="dateofdeath">Date of death: </label>
         <input type="search" name="dateofdeath" placeholder="" autofocus>
-        <br> 
+        <br>
         <label for="dateoffuneral">Date of funeral: </label>
         <input type="search" name="dateoffuneral" placeholder="" autofocus>
-        <br> 
         <br>
         <button type="submit">Search</button>
       </form>
