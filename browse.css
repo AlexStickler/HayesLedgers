@@ -1,0 +1,179 @@
+/* Style you'll see on every page */
+* {
+	font-family: helvetica, arial, sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fffff0;
+}
+header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #b22222;
+}
+
+main {
+	margin-top: 180px;
+	width: inherit;
+}
+
+#banner {
+	text-shadow: 2px 2px 2px #444;
+	-webkit-text-shadow: 2px 2px 2px #444;
+	text-align: center;
+	color: #fff;
+}
+
+#banner h1 {
+	margin: 20px auto;
+}
+
+#banner h3 {
+	margin: 20px auto;
+}
+
+#navbar ul {
+	list-style-type: none;
+	margin: auto;
+	padding: 0;
+	overflow: hidden;
+	background-color: #444;
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+#navbar ul li {
+	float: left;
+	box-sizing: border-box;
+	border-right: 1px solid #bbb;
+	width: 20%;
+}
+
+#navbar ul li:last-child {
+	border-right: none;
+}
+
+#navbar ul li a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 14px 0;
+	text-decoration: none;
+
+    transition-property: all;
+	transition-duration: .5s;
+	-webkit-transition: all .5s;
+	-moz-transition-property: all;
+	-moz-transition-duration: .5s;
+	-o-transition-property: all;
+	-o-transition-duration: .5s;
+}
+
+/* Hovering over any link will cause the font to become bold */
+#navbar ul li a:hover {
+	font-weight: bold;
+}
+
+/* Hovering over a non-active link will cause it to turn black */
+#navbar ul li a:hover:not(.active) {
+	background-color: #333;
+}
+
+/* The active link will be red */
+.active {
+	background-color: #b22222;
+}
+
+/* Style for browse.html */
+.scroll-item {
+	width: 100%!important;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+/* Keeps the separate scoll items on top of each other */
+.scroll-item::after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.scroll-item nav ul {
+	width: 19%;
+	float: left;
+	display: inline;
+	position: fixed;
+	top: 180px;
+	left: 1%;
+	background-color: #444;
+	box-sizing: border-box;
+	list-style-type: none;
+}
+
+.scroll-item nav ul li {
+	border-bottom: 1px solid #bbb;
+}
+
+.scroll-item nav ul li:last-child {
+	border-bottom: none;
+}
+
+.scroll-item nav ul li a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 7px 0;
+
+	transition-property: all;
+	transition-duration: .5s;
+	-webkit-transition: all .5s;
+	-moz-transition-property: all;
+	-moz-transition-duration: .5s;
+	-o-transition-property: all;
+	-o-transition-duration: .5s;
+}
+
+.scroll-item nav ul li a:hover {
+	font-weight: bold;
+}
+
+.scroll-item nav ul li a:hover:not(.current) {
+	background-color: #333;
+}
+
+.current {
+	background-color: #b22222;
+}
+
+.scroll-item section {
+	width: 75%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	display: inline-block;
+	float: right;
+	border: 1px solid #b22222;
+	background-color: #ffe4e1;
+	margin-right: 2.5%;
+}
+
+.scroll-item section h3 {
+	text-align: center;
+	margin: 10px;
+	padding: 5px;
+	background-color: #444;
+	color: #fff;
+	font-weight: normal;
+}
+
+.scroll-item section iframe {
+	margin-left: 26.75%;
+}
