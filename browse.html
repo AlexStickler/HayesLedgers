@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hayes Funeral Home Ledgers</title>
+  <!-- Link to the search page stylesheet -->
+  <link href="browse.css" type="css/text" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('nav').onePageNav();
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div id="banner">
+      <!-- Header that you'll see on every page -->
+      <h1>HAYES FUNERAL HOME LEDGERS</h1>
+      <h3>(1902) - (1950)</h3>
+    </div>
+    <nav id="navbar">
+    <!-- Navigation bar that you'll see on every page -->
+    <!-- Note which link is given the class "active" -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html">Search</a></li>
+        <li><a class="active" href="browse.html">Browse</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Map</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="scroll-item" id="decade-1">
+      <nav>
+        <ul>
+          <li class="current"><a href="#decade-1">02-09</a></li>
+          <li><a href="#decade-2">10-19</a></li>
+          <li><a href="#decade-3">20-29</a></li>
+          <li><a href="#decade-4">30-39</a></li>
+          <li><a href="#decade-5">40-49</a></li>
+          <li><a href="#decade-6">50</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h3>1902 - 1909</h3>
+        <!-- Embedded Internet Arcvhive book viewer -->
+        <iframe frameborder="1" height="430px" src="https://archive.org/stream/ongrowthform1917thom?ui=embed#mode/2up" width="480px"></iframe>
+      </section>
+    </div>
+    <div class="scroll-item" id="decade-2">
+      <section>
+        <h3>1910 - 1919</h3>
+        <iframe frameborder="1" height="430px" src="https://archive.org/stream/ongrowthform1917thom?ui=embed#mode/2up" width="480px"></iframe>
+      </section>
+    </div>
+    <div class="scroll-item" id="decade-3">
+      <section>
+        <h3>1920 - 1929</h3>
+        <iframe frameborder="1" height="430px" src="https://archive.org/stream/ongrowthform1917thom?ui=embed#mode/2up" width="480px"></iframe>
+      </section>
+    </div>
+    <div class="scroll-item" id="decade-4">
+      <section>
+        <h3>1930 - 1939</h3>
+        <iframe frameborder="1" height="430px" src="https://archive.org/stream/ongrowthform1917thom?ui=embed#mode/2up" width="480px"></iframe>
+      </section>
+    </div>
+    <div class="scroll-item" id="decade-5">
+      <section>
+        <h3>1940 - 1949</h3>
+        <iframe frameborder="1" height="430px" src="https://archive.org/stream/ongrowthform1917thom?ui=embed#mode/2up" width="480px"></iframe>
+      </section>
+    </div>
+    <div class="scroll-item" id="decade-6">
+      <section>
+        <h3>1950</h3>
+        <iframe frameborder="1" height="430px" src="https://archive.org/stream/ongrowthform1917thom?ui=embed#mode/2up" width="480px"></iframe>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
