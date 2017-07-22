@@ -35,55 +35,70 @@
       	<div id="instructions">
           <p>Fill in at least one of the following search boxes to search through the database.</p>
           <p>Fill in additional boxes to refine your search.</p>
+          <p>Only checked boxes will appear in the results.</p>
         </div>
+        <input type="checkbox" name="searchfield" value="name" checked>
         <label for="firstname">Name: </label>
-        <input type="search" name="firstname" placeholder="First" autofocus>
+        <input type="search" name="firstname" placeholder="First">
         <label for="middlename"></label>
-        <input type="search" name="middlename" placeholder="Middle" autofocus>
+        <input type="search" name="middlename" placeholder="Middle">
         <label for="lastname"></label>
-        <input type="search" name="lastname" placeholder="Last" autofocus>
+        <input type="search" name="lastname" placeholder="Last">
         <br>
+        <input type="checkbox" name="searchfield" value="cemetery" checked>
         <label for="cemetery">Cemetery: </label>
-        <input type="search" name="cemetery" placeholder="" autofocus>
+        <input type="search" name="cemetery" placeholder="">
         <br>
+        <input type="checkbox" name="searchfield" value="causeofdeath" checked>
         <label for="causeofdeath">Cause of death: </label>
-        <input type="search" name="causeofdeath" placeholder="" autofocus>
+        <input type="search" name="causeofdeath" placeholder="">
         <br>
+        <input type="checkbox" name="searchfield" value="yearofdeath" checked>
         <label for="yearofdeath">Year of death: </label>
-        <input type="search" name="yearofdeath" placeholder="" autofocus>
+        <input type="search" name="yearofdeath" placeholder="">
         <br>
+        <input type="checkbox" name="searchfield" value="yearofdeathrange" checked>
         <label for="startyear">Year of death (range): </label>
-        <input type="search" name="startyear" placeholder="" autofocus>
+        <input type="search" name="startyear" placeholder="">
         <label for="endyear">- </label>
-        <input type="search" name="endyear" placeholder="" autofocus>
+        <input type="search" name="endyear" placeholder="">
         <br>
+        <input type="checkbox" name="searchfield" value="occupation" checked>
         <label for="occupation">Occupation: </label>
-        <input type="search" name="occupation" placeholder="" autofocus>
+        <input type="search" name="occupation" placeholder="">
         <br>
-        <label for="dateonledger">Date on ledger: </label>
-        <input type="search" name="dateonledger" placeholder="" autofocus>
-        <br> 
-        <label for="maritalstatus">Marital status: </label>
-        <input type="search" name="maritalstatus" placeholder="" autofocus>
-        <br>
-        <label for="locationofdeath">Location of death: </label>
-        <input type="search" name="locationofdeath" placeholder="" autofocus>
-        <br>
-        <label for="chargedto">Funeral costs charged to: </label>
-        <input type="search" name="chargedto" placeholder="" autofocus>
-        <br>   
-        <label for="howpayment">How payment was made: </label>
-        <input type="search" name="howpayment" placeholder="" autofocus>
-        <br>
-        <label for="nameofphysician">Name of physician: </label>
-        <input type="search" name="nameofphysician" placeholder="" autofocus>
-        <br>
+        <input type="checkbox" name="searchfield" value="dateofdeath" checked>
         <label for="dateofdeath">Date of death: </label>
-        <input type="search" name="dateofdeath" placeholder="" autofocus>
+        <input type="search" name="dateofdeath" placeholder="">
         <br>
+        <input type="checkbox" name="searchfield" value="nameofphysician" checked>
+        <label for="nameofphysician">Name of physician: </label>
+        <input type="search" name="nameofphysician" placeholder="">
+        <br>
+        <input type="checkbox" name="searchfield" value="maritalstatus" checked>
+        <label for="maritalstatus">Marital status: </label>
+        <input type="search" name="maritalstatus" placeholder="">
+        <br>
+        <input type="checkbox" name="searchfield" value="dateofbirth" checked>
+        <label for="dateofbirth">Date of birth: </label>
+        <input type="search" name="dateofbirth" placeholder="">
+        <br>
+        <input type="checkbox" name="searchfield" value="dateoffuneral" checked>
         <label for="dateoffuneral">Date of funeral: </label>
-        <input type="search" name="dateoffuneral" placeholder="" autofocus>
+        <input type="search" name="dateoffuneral" placeholder="">
         <br>
+        <input type="checkbox" name="searchfield" value="locationofdeath" checked>
+        <label for="locationofdeath">Location of death: </label>
+        <input type="search" name="locationofdeath" placeholder="">
+        <br>
+        <input type="checkbox" name="searchfield" value="totalcost" checked>
+        <label for="totalcost">Total cost: </label>
+        <input type="search" name="totalcost" placeholder="">
+        <br>
+        <input type="checkbox" name="searchfield" value="chargedto" checked>
+        <label for="chargedto">Charged to: </label>
+        <input type="search" name="chargedto" placeholder="">
+        <br>   
         <button type="submit">Search</button>
       </form>
     </div>
