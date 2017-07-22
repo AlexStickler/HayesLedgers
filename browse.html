@@ -7,13 +7,27 @@
   <!-- Link to the search page stylesheet -->
   <link rel="stylesheet" type="css/text" href="browse.css"/>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
-  <script language="javascript">
+  <script type="text/javascript" src="jQuery-One-Page-Nav/jquery.nav.js"></script>
+  <script type="text/javascript" language="javascript">
     $(document).ready(function() {
-      $('#nav').onePageNav();
+      $('#nav').onePageNav( {
+        currentClass: 'active',
+        changeHash: false,
+      });
     });
   </script>
+
+  <!-- <link rel="stylesheet" type="text/css" href="bookreader/BookReader/BookReader.css" id="BRCSS"/> -->
+
+  <script type="text/javascript" src="bookreader/BookReader/jquery-ui-1.12.0.min.js"></script>
+  <script type="text/javascript" src="bookreader/BookReader/jquery.browser.min.js"></script>
+  <script type="text/javascript" src="bookreader/BookReader/dragscrollable.js"></script>
+  <script type="text/javascript" src="bookreader/BookReader/jquery.colorbox-min.js"></script>
+  <script type="text/javascript" src="bookreader/BookReader/jquery.ui.ipad.js"></script>
+  <script type="text/javascript" src="bookreader/BookReader/jquery.bt.min.js"></script>
+
+  <script type="text/javascript" src="bookreader/BookReader/BookReader.js"></script>
+
 </head>
 
 <body>
@@ -40,11 +54,11 @@
     <div id="instructions">
       <p>Browse through the following volumes of the Hayes Ledgers.</p>
       <p>Each volume contains a decade's worth of ledgers.</p>
-    </div>
+    </div> <!-- End instructions -->
     <div class="scroll-item" id="decade-1">
       <nav id="nav">
         <ul>
-          <li class="current"><a href="#decade-1">1902-1909</a></li>
+          <li class="active"><a href="#decade-1">1902-1909</a></li>
           <li><a href="#decade-2">1910-1919</a></li>
           <li><a href="#decade-3">1920-1929</a></li>
           <li><a href="#decade-4">1930-1939</a></li>
@@ -54,8 +68,7 @@
       </nav>
       <section>
         <h3>1902 - 1909</h3>
-        <!-- Embedded Internet Arcvhive book viewer -->
-        <iframe frameborder="1" height="430px" src="https://archive.org/stream/ongrowthform1917thom?ui=embed#mode/2up" width="480px"></iframe>
+        <iframe src="https://www.archive.org/stream/abroadcranethoma00craniala?ui=embed#mode/2up/page/18" width="450px" height="400px"></iframe>
       </section>
     </div>
     <div class="scroll-item" id="decade-2">
