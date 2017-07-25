@@ -93,3 +93,21 @@ main {
 .active {
 	background-color: #b22222;
 }
+
+/* Style for index.html */
+#info {
+	width: 100%;
+}
+
+#info p {
+	text-align: center;
+}
+
+#features {
+	width: 100%;
+	margin-left: 15px;
+}
+
+#features ul {
+	list-style-type: none;
+}
