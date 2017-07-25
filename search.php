@@ -76,7 +76,7 @@
     <br><br>
     <h3>(1902) - (1950)</h3
     <br>
-    <table id='keywords' class ='responsive' cellspacing='0' cellpadding='0'>
+    <table id='keywords' class ='.responsive' cellspacing='0' cellpadding='0'>
         <thead>
             <tr>
                 <th><span>First Name</span></th>
