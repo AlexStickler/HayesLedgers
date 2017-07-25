@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
-  <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
-  <script type="text/javascript" src="responsive=tables.js">
+  <link type="text/css" media="screen" rel="stylesheet" href="sresults.css" />
+  <script type="text/javascript" src="responsive-tables.js">
   $(document).ready(function() {
       $("#keywords").tablesorter( {
           headers: {
