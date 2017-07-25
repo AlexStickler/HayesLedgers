@@ -34,5 +34,4 @@ table td, table th { padding: 9px 10px; text-align: left; }
 	table.responsive td, table.responsive th { position: relative; white-space: nowrap; overflow: hidden; }
 	table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
 	
-	
 }
