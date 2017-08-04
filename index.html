@@ -6,6 +6,15 @@
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the home page stylesheet -->
   <link rel="stylesheet" type="css/text" href="index.css"/>
+  <script type="text/javascript" src="elevatezoom-master/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="elevatezoom-master/jquery.elevateZoom-3.0.8.min.js"></script>
+  <script type="text/javascript">
+    $("#zoom").elevateZoom({
+      zoomType: "lens",
+      lensShape: "round",
+      lensSize: 200,
+    });
+  </script>
 </head>
 
 <body>
@@ -27,27 +36,30 @@
       </ul>
     </nav>
   </header>
-
-  <div class="parallax">
-    <main>
-      <div id="info">
-        <br><br><br><br><br><br><br><br><br>
-        <p>The Hayes Ledgers are a collection of funeral documents from...</p>
-      </div>
-      <div id="features">
-        <h3>Features:</h3>
+  <main>
+    <ul id="zoom_images">
+      <li><img id="zoom" src="images/Small1.png" data-zoom-image="images/Large1.jpg"/></li>
+      <li><img id="zoom" src="images/Small2.png" data-zoom-image="images/Large2.jpg"/></li>
+      <li><img id="zoom" src="images/Small3.png" data-zoom-image="images/Large3.jpg"/></li>
+    </ul>
+    <div id="features">
+      <h3>Features</h3>
+      <br>
+      <ul>
+        <li><h4>Search</h4>A classic search tool; type in what you want to search, and you'll be taken to a table of all relevant results. Clicking on an individual's name in the table will take you to their ledger.</li>
         <br>
-        <ul>
-          <li><h4>Search</h4><p>A classic search tool; type in what you want to search, and you'll be taken to a table of all relevant results. Clicking on a name in the table will take you to their ledger.</p></li>
-          <br>
-          <li>Browse</li>
-          <br>
-          <li>Explore</li>
-          <br>
-          <li>Map</li>
-        </ul>
-      </div> <!-- End features -->
-    </main>
-  </div> <!-- End parallax scrolling container -->
+        <li><h4>Browse</h4>Our complete collection of ledger scans, organized into volumes. Click on a decade to be taken to its corresponding volume.</li>
+        <br>
+        <li><h4>Explore</h4>Analytic tools such as frequency distributions, bar graphs, and line graphs.</li>
+        <br>
+        <li><h4>Map</h4>An ineractive Google map that allows you to see ledger data in the context of its geographic loction.</li>
+      </ul>
+    </div> <!-- End features -->
+    <div id="info">
+      <h3>Info</h3>
+      <br>
+      <p>The Hayes Ledgers are a collection of funeral documents from...</p>
+    </div>
+  </main>
 </body>
 </html>
