@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
-  <link href="search.css" type="css/text" rel="stylesheet"/>
+  <link rel="stylesheet" href="browse.css" type="text/css" media="all"/>
 </head>
 
 <body>
@@ -37,6 +37,7 @@
           <p>Fill in additional boxes to refine your search.</p>
           <p>Only checked boxes will appear in the results.</p>
         </div>
+        <br><br><br><br><br>
         <input type="checkbox" name="searchfield" value="name" checked/>
         <label for="name_first">Name: </label>
         <input type="search" name="name_first" id="name_first" placeholder="First"/>
@@ -94,10 +95,6 @@
         <input type="checkbox" name="searchfield" value="chargedto" checked/>
         <label for="charge_to">Charged to: </label>
         <input type="search" name="charge_to" id="charge_to" placeholder=""/>
-        <br>
-        <input type="checkbox" name="searchfield" value="dateofbirth" checked/>
-        <label for="date_of_birth">Date of birth: </label>
-        <input type="search" name="date_of_birth" id="date_of_birth" placeholder="YYYY-MM-DD"/>
         <br>
         <button type="submit">Search</button>
       </form>
