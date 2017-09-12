@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
-  <link type="text/css" media="screen" rel="stylesheet" href="sresults.css" />
-  <script type="text/javascript" src="responsive-tables.js">
+  <link type="text/css" media="all" rel="stylesheet" href="index.css" />
+  <!--<script type="text/javascript" src="responsive-tables.js">-->
   $(document).ready(function() {
       $("#keywords").tablesorter( {
           headers: {
@@ -76,7 +76,7 @@
     <br><br>
     <h3>(1902) - (1950)</h3
     <br>
-    <table id='keywords' class ='responsive' cellspacing='0' cellpadding='0'>
+    <table id='keywords' class ='tablesorter' cellspacing='0' cellpadding='0'>
         <thead>
             <tr>
                 <th><span>First Name</span></th>
@@ -119,7 +119,7 @@
     echo"</table>";
 
     echo json_encode($result);
-    mysqli_close($con)
+    mysqli_close($con);
     ?>
 
 </body>
