@@ -8,27 +8,16 @@
   <link type="text/css" media="all" rel="stylesheet" href="search.css" />
   <!-- Table Style -->
   <style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
 
-    th, td {
+    #ledgers td {
         text-align: left;
         padding: 8px;
     }
-
-    tr:nth-child(even){background-color: #f2f2f2}
 
     #ledgers {
         font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
         border-collapse: collapse;
         width: 100%;
-    }
-
-    #ledgers td, #ledgers th {
-        border: 1px solid #ddd;
-        padding: 8px;
     }
 
     #ledgers tr:nth-child(even){background-color: #f2f2f2;}
