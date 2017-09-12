@@ -7,11 +7,10 @@
   <link type="text/css" media="all" rel="stylesheet" href="index.css" />
   <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
   <script type="text/javascript" src="responsive-tables.js"></script>
+  <script src="javascripts/jquery.min.js"></script>
 </head>
 
 <body>
-    <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
-    <script type="text/javascript" src="responsive-tables.js"></script>
   <header>
     <div id="banner">
       <!-- Header that you'll see on every page -->
