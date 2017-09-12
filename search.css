@@ -190,26 +190,3 @@ main {
 	position: relative;
 	top: 5px;
 }
-
-#ledgers {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#ledgers td, #ledgers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#ledgers tr:nth-child(even){background-color: #f2f2f2;}
-
-#ledgers tr:hover {background-color: #ddd;}
-
-#ledgers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #b22222;
-    color: white;
-}
