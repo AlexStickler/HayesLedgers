@@ -5,9 +5,13 @@
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="index.css" />
+  <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
+  <script type="text/javascript" src="responsive-tables.js"></script>
 </head>
 
 <body>
+    <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
+    <script type="text/javascript" src="responsive-tables.js"></script>
   <header>
     <div id="banner">
       <!-- Header that you'll see on every page -->
@@ -60,7 +64,7 @@
     }
 
     //Create sql query to get results based on input ordered by age lowest to highest
-    $sql = "SELECT * FROM l1 WHERE name_first LIKE '%$name_first%' or name_first LIKE ''
+    $sql = "SELECT * FROM l1 WHERE name_first LIKE '%$name_first%' OR name_first LIKE ''
         AND name_middle LIKE '%$name_middle%' OR name_middle LIKE ''
         AND name_last LIKE '%$name_last%' OR name_last LIKE ''
         AND interment_at LIKE '%$interment_at%' OR interment_at LIKE ''
@@ -81,7 +85,7 @@
     if ($result->num_rows > 0) {
 
         //Print out table, with headers of each searchable category
-        echo "<table>
+        echo "<table class="responsive">
                  <tr>
                     <th>First Name</th>
                     <th>Middle Name</th>
