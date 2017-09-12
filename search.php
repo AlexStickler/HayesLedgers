@@ -5,7 +5,7 @@
   <!-- <meta name="viewport" content="width=device-width"> -->
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
-  <link type="text/css" media="all" rel="stylesheet" href="browse.css" />
+  <link type="text/css" media="all" rel="stylesheet" href="search.css" />
   <!-- Table Style -->
   <style>
     table {
