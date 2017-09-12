@@ -7,7 +7,7 @@
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="search.css" />
   <!-- Table Style -->
-  <style>
+  <!--<style>
 
     #ledgers td {
         text-align: left;
@@ -31,7 +31,7 @@
         background-color: #b22222;
         color: white;
     }
-    </style>
+</style>-->
   <!--Stuff for responsive Zurb table -->
   <!-- <link rel="stylesheet" href="stylesheets/globals.css">
   <link rel="stylesheet" href="stylesheets/typography.css">
@@ -121,8 +121,8 @@
     if ($result->num_rows > 0) {
 
         //Print out table, with headers of each searchable category
-        echo"<div style="overflow-x:auto;">
-                <table id="ledgers">
+            echo"
+                <table>
                     <tr>
                         <th>First Name</th>
                         <th>Middle Name</th>
@@ -159,8 +159,7 @@
                     <td>".$row["charge_to"]."</td>
                 </tr>";
         }
-        echo "</table>
-            </div>";
+        echo "</table>";
     } else {
         echo "0 results";
     }
