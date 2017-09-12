@@ -11,7 +11,6 @@
 body {
 	background-color: #fffff0;
 }
-
 header {
 	position: fixed;
 	left: 0;
@@ -95,27 +94,122 @@ main {
 	background-color: #b22222;
 }
 
-/* Stye for search.html */
-#searchtool {
-	margin-left: 15px;
-	width: 100%;
+/* Style for browse.html */
+.scroll-item {
+	width: 100%!important;
+	padding-top: 185px;
 }
 
-#searchtool p {
-	line-height: 20px;
-	font-style: italic;
+.scroll-item:not(#decade-1) {
+	margin-top: -200px;
 }
 
-#searchtool input, button {
-	margin: 5px auto;
+/* Keeps the separate scoll items on top of each other */
+.scroll-item::after {
+	content: ".";
+	display: block;
+	height: 50px;
+	clear: both;
+	visibility: hidden;
 }
 
-#searchtool button {
-	padding: 3.5px;
-	cursor: pointer;
+.scroll-item nav ul {
+	width: 19%;
+	float: left;
+	display: inline;
+	position: fixed;
+	top: 240px;
+	left: 1%;
+	background-color: #444;
+	list-style-type: none;
+}
+
+.scroll-item nav ul li {
+	border-bottom: 1px solid #bbb;
+}
+
+.scroll-item nav ul li:last-child {
+	border-bottom: none;
+}
+
+.scroll-item nav ul li a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 7px 0;
+
+	transition-property: all;
+	transition-duration: .4s;
+	-webkit-transition: all .4s;
+	-moz-transition-property: all;
+	-moz-transition-duration: .4s;
+	-o-transition-property: all;
+	-o-transition-duration: .4s;
+}
+
+.scroll-item nav ul li a:hover {
+	font-weight: bold;
+	background-color: #333;
+}
+
+.current {
+	background-color: #b22222;
+}
+
+.scroll-item section {
+	width: 75%;
+	margin: 0 auto;
+	display: inline-block;
+	float: right;
+	border: 1px solid #b22222;
+	background-color: #ffe4e1;
+	margin-right: 2.5%;
+}
+
+.scroll-item section h3 {
+	text-align: center;
+	margin: 10px;
+	padding: 5px;
+	background-color: #444;
+	color: #fff;
+	font-weight: normal;
+}
+
+.scroll-item section iframe {
+	margin-left: 25%;
 }
 
 #instructions {
-	margin-bottom: 15px;
+	margin-bottom: -165px;
+	margin-left: 15px;
 	width: 100%;
+	line-height: 20px;
+	font-style: italic;
+	text-align: center;
+	position: relative;
+	top: 5px;
+}
+
+#ledgers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#ledgers td, #ledgers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#ledgers tr:nth-child(even){background-color: #f2f2f2;}
+
+#ledgers tr:hover {background-color: #ddd;}
+
+#ledgers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #b22222;
+    color: white;
 }

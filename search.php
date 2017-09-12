@@ -5,7 +5,21 @@
   <!-- <meta name="viewport" content="width=device-width"> -->
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
-  <link type="text/css" media="all" rel="stylesheet" href="index.css" />
+  <link type="text/css" media="all" rel="stylesheet" href="browse.css" />
+  <!-- Table Style -->
+  <style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even){background-color: #f2f2f2}
+    </style>
   <!--Stuff for responsive Zurb table -->
   <!-- <link rel="stylesheet" href="stylesheets/globals.css">
   <link rel="stylesheet" href="stylesheets/typography.css">
@@ -95,23 +109,24 @@
     if ($result->num_rows > 0) {
 
         //Print out table, with headers of each searchable category
-        echo "<table>
-                 <tr>
-                    <th>First Name</th>
-                    <th>Middle Name</th>
-                    <th>Last Name</th>
-                    <th>Cemetery</th>
-                    <th>Cause Of Death</th>
-                    <th>Age</th>
-                    <th>Occupation</th>
-                    <th>Name Of Physician</th>
-                    <th>Marital Status</th>
-                    <th>Date Of Death</th>
-                    <th>Date Of Funeral</th>
-                    <th>Location Of Death</th>
-                    <th>Total Cost</th>
-                    <th>Charged To</th>
-                 </tr>";
+        echo"<div style="overflow-x:auto;">
+                <table id="ledgers">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Cemetery</th>
+                        <th>Cause Of Death</th>
+                        <th>Age</th>
+                        <th>Occupation</th>
+                        <th>Name Of Physician</th>
+                        <th>Marital Status</th>
+                        <th>Date Of Death</th>
+                        <th>Date Of Funeral</th>
+                        <th>Location Of Death</th>
+                        <th>Total Cost</th>
+                        <th>Charged To</th>
+                    </tr>";
 
         while($row = $result->fetch_assoc()) {
             echo
@@ -132,7 +147,8 @@
                     <td>".$row["charge_to"]."</td>
                 </tr>";
         }
-        echo "</table>";
+        echo "</table>
+            </div>";
     } else {
         echo "0 results";
     }
