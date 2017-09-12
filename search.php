@@ -1,13 +1,24 @@
 <!DOCTYPE HTML>
 <html lang="en">
-  <meta charset="utf-8">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="index.css" />
-  <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
-  <script type="text/javascript" src="responsive-tables.js"></script>
+  <!--Stuff for responsive Zurb table -->
+  <link rel="stylesheet" href="stylesheets/globals.css">
+  <link rel="stylesheet" href="stylesheets/typography.css">
+  <link rel="stylesheet" href="stylesheets/grid.css">
+  <link rel="stylesheet" href="stylesheets/ui.css">
+  <link rel="stylesheet" href="stylesheets/forms.css">
+  <link rel="stylesheet" href="stylesheets/orbit.css">
+  <link rel="stylesheet" href="stylesheets/reveal.css">
+  <link rel="stylesheet" href="stylesheets/mobile.css">
+  <link rel="stylesheet" href="stylesheets/app.css">
+  <link rel="stylesheet" href="responsive-tables.css">
   <script src="javascripts/jquery.min.js"></script>
+  <script src="responsive-tables.js"></script>
 </head>
 
 <body>
