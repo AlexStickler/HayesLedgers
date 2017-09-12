@@ -6,17 +6,8 @@
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="index.css" />
-  <!--<script type="text/javascript" src="responsive-tables.js">-->
-  $(document).ready(function() {
-      $("#keywords").tablesorter( {
-          headers: {
-              2: {
-                  sorter: 'digit'
-              }
-          }
-      });
-  });
-  </script>
+  <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
+  <script type="text/javascript" src="responsive-tables.js"></script>
 </head>
 
 <body>
@@ -56,15 +47,17 @@
     $place_of_death=$_GET['place_of_death'];
     $total_footing_of_bill=$_GET['total_footing_of_bill'];
     $charge_to=$_GET['charge_to'];
-    $con = mysqli_connect("localhost","ernest","xroads66");
+    $p=$_Get['prim'];
+
+    $con = mysql_connect("localhost","ernest","xroads66");
 
     if (!$con) {
-        die('Could not connect: ' . mysqli_error());
+        die('Could not connect: ' . mysql_error());
     }
 
-    mysqli_select_db("hayesLedgers", $con);
+    mysql_select_db("hayesLedgers", $con);
 
-    $result = mysqli_query("SELECT * FROM l1 WHERE name_first LIKE '$name_first%' AND name_middle LIKE
+    $result = mysql_query("SELECT * FROM l1 WHERE name_first LIKE '$name_first%' AND name_middle LIKE
         '$name_middle%' AND name_last LIKE '$name_last%' AND internment_at LIKE '$internment_at%'
         AND cause_of_death LIKE '$cause_of_death%' AND age_years LIKE '$age_years%' AND occupation LIKE
         '$occupation%' AND certifying_physician LIKE '$certifying_physician%' AND marriage_status LIKE
@@ -74,9 +67,9 @@
     echo
     "<h1>HAYES FUNERAL HOME LEDGERS</h1>
     <br><br>
-    <h3>(1902) - (1950)</h3
+    <h3>(1902) - (1950)</h3>
     <br>
-    <table id='keywords' class ='tablesorter' cellspacing='0' cellpadding='0'>
+    <table id='keywords' class="responsive">
         <thead>
             <tr>
                 <th><span>First Name</span></th>
@@ -95,7 +88,7 @@
                 <th><span>Charged To</span></th>
             </tr>
         </thead>";
-        while($row = mysqli_fetch_array($result)) {
+        while($row = mysql_fetch_array($result)) {
             echo
             "
             <tr>
@@ -119,7 +112,7 @@
     echo"</table>";
 
     echo json_encode($result);
-    mysqli_close($con);
+    mysql_close($con);
     ?>
 
 </body>
