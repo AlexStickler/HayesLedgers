@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Hayes Funeral Home Ledgers</title>
-  <!-- Link to the search page stylesheet -->
-  <link rel="stylesheet" href="browse.css" type="text/css" media="all"/>
+    <meta charset = "utf-8">
+    <title>Hayes Funeral Home Ledgers</title>
+    <!-- Link to the search page stylesheet -->
+    <link rel="stylesheet" href="browse.css" type="text/css" media="all"/>
 </head>
 
 <body>
-  <header>
-    <div id="banner">
-      <!-- Header that you'll see on every page -->
-      <h1>HAYES FUNERAL HOME LEDGERS</h1>
+	<header>
+        <div id="banner">
+            <!--Header that you'll see on every page -->
+            <h1>HAYES FUNERAL HOME LEDGERS</h1>
       <h3>(1902) - (1950)</h3>
     </div>
     <nav id="navbar">
@@ -26,80 +26,159 @@
         <li><a href="#">Map</a></li>
       </ul>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <div id="searchtool">
-    <!-- Search tool -->
-      <form action="search.php" method="get">
-      	<div id="instructions">
-          <p>Fill in at least one of the following search boxes to search through the database.</p>
-          <p>Fill in additional boxes to refine your search.</p>
-          <p>Only checked boxes will appear in the results.</p>
-        </div>
-        <br><br><br><br><br>
-        <input type="checkbox" name="searchfield" value="name" checked/>
-        <label for="name_first">Name: </label>
-        <input type="search" name="name_first" id="name_first" placeholder="First"/>
-        <label for="name_middle"></label>
-        <input type="search" name="name_middle" id="name_middle" placeholder="Middle"/>
-        <label for="name_last"></label>
-        <input type="search" name="name_last" id="name_last" placeholder="Last"/>
-        <br>
-        <input type="checkbox" name="searchfield" value="cemetery" checked/>
-        <label for="internment_at">Cemetery: </label>
-        <input type="search" name="internment_at" id="internment_at" placeholder=""/>
-        <br>
-        <input type="checkbox" name="searchfield" value="causeofdeath" checked/>
-        <label for="cause_of_death">Cause of death: </label>
-        <input type="search" name="cause_of_death" id="cause_of_death" placeholder=""/>
-        <br>
-        <input type="checkbox" name="searchfield" value="age" checked/>
-        <label for="age_years">Age: </label>
-        <input type="search" name="age_years" id="age_years" placeholder=""/>
-        <br>
-        <!--<input type="checkbox" name="searchfield" value="yearofdeathrange" checked/>
-        <label for="startyear">Year of death (range): </label>
-        <input type="search" name="startyear" placeholder=""/>
-        <label for="endyear">- </label>
-        <input type="search" name="endyear" placeholder=""/>
-        <br>-->
-        <input type="checkbox" name="searchfield" value="occupation" checked/>
+	<main>
+	<div align="left">
+
+	<br><h2>Hayes Funeral Home Ledgers</h2>
+	<h2>(1902-1950) </h2>
+	<h3>Search by:</h3><br>
+
+<form action="process.php" method="get">
+
+    <div class="section goup">
+	<div class = "col results_1_of_2">
+	    <label for="name_first">First Name: </label>
+	    <input type="search"
+	       name="name_first"
+	       id="name_first"
+	       placeholder=""
+	       autofocus
+	       />
+<br><br>
+
+	    <label for="name_middle">Middle Name: </label>
+	    <input type="search"
+	       name="name_middle"
+	       id="name_middle"
+	       placeholder=""
+	       autofocus
+	       />
+<br><br>
+
+        <label for="name_last">Last Name: </label>
+        <input type="search"
+           name="name_last"
+           id="name_last"
+           placeholder=""
+           autofocus
+           />
+<br><br>
+	</div>
+
+	<div class = "col results_1_of_2">
+
+        <label for="interment_at">Cemetery: </label>
+        <input type="search"
+           name="interment_at"
+           id="interment_at"
+           placeholder=""
+           autofocus
+           />
+<br><br>
+
+	    <label for="cause_of_death">Cause of Death: </label>
+	    <input type="search"
+	       name="cause_of_death"
+	       id="cause_of_death"
+	       placeholder=""
+	       autofocus
+	       />
+<br><br>
+
+		<label for="age">Age: </label>
+	    <input type="search"
+	       name="age_years"
+	       id="age_years"
+	       placeholder=""
+	       autofocus
+	       />
+<br><br>
+
         <label for="occupation">Occupation: </label>
-        <input type="search" name="occupation" id="occupation" placeholder=""/>
-        <br>
-        <input type="checkbox" name="searchfield" value="nameofphysician" checked/>
-        <label for="certifying_physician">Name of physician: </label>
-        <input type="search" name="certifying_physician" id="certifying_physician" placeholder=""/>
-        <br>
-        <input type="checkbox" name="searchfield" value="maritalstatus" checked/>
-        <label for="marriage_status">Marital status: </label>
-        <input type="search" name="marriage_status" id="marriage_status" placeholder="Single, Married, Widow"/>
-        <br>
-        <input type="checkbox" name="searchfield" value="dateofdeath" checked/>
-        <label for="date_of_death">Date of death: </label>
-        <input type="search" name="date_of_death" id="date_of_death" placeholder="YYYY-MM-DD"/>
-        <br>
-        <input type="checkbox" name="searchfield" value="dateoffuneral" checked/>
-        <label for="date_of_funeral">Date of funeral: </label>
-        <input type="search" name="date_of_funeral" id="date_of_funeral" placeholder="YYYY-MM-DD"/>
-        <br>
-        <input type="checkbox" name="searchfield" value="locationofdeath" checked/>
-        <label for="place_of_death">Location of death: </label>
-        <input type="search" name="place_of_death" id="place_of_death" placeholder=""/>
-        <br>
-        <input type="checkbox" name="searchfield" value="totalcost" checked/>
-        <label for="total_footing_of_bill">Total cost: </label>
-        <input type="search" name="total_footing_of_bill" id="total_footing_of_bill" placeholder=""/>
-        <br>
-        <input type="checkbox" name="searchfield" value="chargedto" checked/>
+        <input type="search"
+            name="occuptaion"
+            id="occupation"
+            placeholder=""
+            autofocus
+            />
+<br><br>
+
+        <label for="certifying_physician">Name of Physician: </label>
+        <input type="search"
+            name="certifying_physician"
+            id="certifying_physician"
+            placeholder=""
+            autofocus
+            />
+<br><br>
+
+        <label for="marriage_status">Marital Status: </label>
+        <input type="search"
+            name="marriage_status"
+            id="marriage_status"
+            placeholder=""
+            autofocus
+            />
+<br><br>
+
+        <label for="date_of_death">Date of Death: </label>
+        <input type="search"
+            name="date_of_death"
+            id="date_of_death"
+            placeholder=""
+            autofocus
+            />
+<br><br>
+
+        <label for="date_of_funeral">Date of Funeral: </label>
+        <input type="search"
+        name="date_of_funeral"
+        id="date_of_funeral"
+        placeholder=""
+        autofocus
+        />
+<br><br>
+
+        <label for="place_of_death">Location of Death: </label>
+        <input type="search"
+            name="place_of_death"
+            id="place_of_death"
+            placeholder=""
+            autofocus
+            />
+<br><br>
+
+        <label for="total_footing_of_bill">Total Cost: </label>
+        <input type="search"
+            name="total_footing_of_bill"
+            id="total_footing_of_bill"
+            placeholder=""
+            autofocus
+            />
+<br><br>
+
         <label for="charge_to">Charged to: </label>
-        <input type="search" name="charge_to" id="charge_to" placeholder=""/>
-        <br>
-        <button type="submit">Search</button>
-      </form>
+        <input type="search"
+            name="charge_to"
+            id="charge_to"
+            placeholder=""
+            autofocus
+            />
+<br><br>
+
     </div>
-    <a href = "/DPS2017/ledgers.csv" download>
-  </main>
+    </div>
+
+    <br><br>
+    <button class="hey" type="submit">Search</button>
+
+</form>
+
+	</div>
+	<br><br>
+	<a href = "/DPS2017/ledgers.csv" download>
+	</main>
 </body>
 </html>
