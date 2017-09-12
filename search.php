@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <!-- <meta name="viewport" content="width=device-width"> -->
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="index.css" />
   <!--Stuff for responsive Zurb table -->
-  <link rel="stylesheet" href="stylesheets/globals.css">
+  <!-- <link rel="stylesheet" href="stylesheets/globals.css">
   <link rel="stylesheet" href="stylesheets/typography.css">
   <link rel="stylesheet" href="stylesheets/grid.css">
   <link rel="stylesheet" href="stylesheets/ui.css">
@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="stylesheets/app.css">
   <link rel="stylesheet" href="responsive-tables.css">
   <script src="javascripts/jquery.min.js"></script>
-  <script src="responsive-tables.js"></script>
+  <script src="responsive-tables.js"></script> -->
 </head>
 
 <body>
@@ -95,7 +95,7 @@
     if ($result->num_rows > 0) {
 
         //Print out table, with headers of each searchable category
-        echo "<table class="responsive">
+        echo "<table>
                  <tr>
                     <th>First Name</th>
                     <th>Middle Name</th>
