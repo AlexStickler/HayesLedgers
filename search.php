@@ -33,10 +33,15 @@
   <br>
 
     <?php
+    $servername = "localhost";
+    $username = "ernest";
+    $password = "xroads66";
+    $dbname = "hayesLedgers";
+
     $name_first=$_GET['name_first'];
     $name_middle=$_GET['name_middle'];
     $name_last=$_GET['name_last'];
-    $internment_at=$_GET['internment_at'];
+    $interment_at=$_GET['interment_at'];
     $cause_of_death=$_GET['cause_of_death'];
     $age_years=$_GET['age_years'];
     $occupation=$_GET['occupation'];
@@ -47,72 +52,74 @@
     $place_of_death=$_GET['place_of_death'];
     $total_footing_of_bill=$_GET['total_footing_of_bill'];
     $charge_to=$_GET['charge_to'];
-    $p=$_Get['prim'];
 
-    $con = mysql_connect("localhost","ernest","xroads66");
+    //Creating connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    if (!$con) {
-        die('Could not connect: ' . mysql_error());
+    //Checking connection
+    if ($conn->connect_error) {
+        die("Could not connect: " . $conn->connect_error;
     }
 
-    mysql_select_db("hayesLedgers", $con);
-
-    $result = mysql_query("SELECT * FROM l1 WHERE name_first LIKE '$name_first%' AND name_middle LIKE
-        '$name_middle%' AND name_last LIKE '$name_last%' AND internment_at LIKE '$internment_at%'
+    //Create sql query to get results based on input ordered by age lowest to highest
+    $sql = "SELECT * FROM l1 WHERE name_first LIKE '$name_first%' AND name_middle LIKE
+        '$name_middle%' AND name_last LIKE '$name_last%' AND interment_at LIKE '$interment_at%'
         AND cause_of_death LIKE '$cause_of_death%' AND age_years LIKE '$age_years%' AND occupation LIKE
         '$occupation%' AND certifying_physician LIKE '$certifying_physician%' AND marriage_status LIKE
         '$marriage_status%' AND date_of_death LIKE '$date_of_death%' AND date_of_funeral LIKE
         '$date_of_funeral%' AND place_of_death LIKE '$place_of_death%' AND total_footing_of_bill LIKE
-        '$total_footing_of_bill%' AND charge_to LIKE '$charge_to%' ORDER BY age_years ASC");
-    echo
-    "<h1>HAYES FUNERAL HOME LEDGERS</h1>
-    <br><br>
-    <h3>(1902) - (1950)</h3>
-    <br>
-    <table id='keywords' class="responsive">
+        '$total_footing_of_bill%' AND charge_to LIKE '$charge_to%' ORDER BY age_years ASC";
+
+    //result = connection to the database w/ query as input
+    $result = $conn->query($sql);
+
+    //While there are still rows left to be printed that match the query
+    if($result->num_rows > 0) {
+        //Print out table, with headers of each searchable category
+        echo "<br><br><br><table class="responsive">
         <thead>
             <tr>
-                <th><span>First Name</span></th>
-                <th><span>Middle Name</span></th>
-                <th><span>Last Name</span></th>
-                <th><span>Cemetery</span></th>
-                <th><span>Cause Of Death</span></th>
-                <th><span>Age</span></th>
-                <th><span>Occupation</span></th>
-                <th><span>Name Of Physician</span></th>
-                <th><span>Marital Status</span></th>
-                <th><span>Date Of Death</span></th>
-                <th><span>Date Of Funeral</span></th>
-                <th><span>Location Of Death</span></th>
-                <th><span>Total Cost</span></th>
-                <th><span>Charged To</span></th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Cemetery</th>
+                <th>Cause Of Death</th>
+                <th>Age</th>
+                <th>Occupation</th>
+                <th>Name Of Physician</th>
+                <th>Marital Status</th>
+                <th>Date Of Death</th>
+                <th>Date Of Funeral</th>
+                <th>Location Of Death</th>
+                <th>Total Cost</th>
+                <th><Charged To</th>
             </tr>
         </thead>";
-        while($row = mysql_fetch_array($result)) {
-            echo
-            "
-            <tr>
-                <td>".$row['name_first']."</td>
-                <td>".$row['name_middle']."</td>
-                <td>".$row['name_last']."</td>
-                <td>".$row['internment_at']."</td>
-                <td>".$row['cause_of_death']."</td>
-                <td>".$row['age_years']."</td>
-                <td>".$row['occupation']."</td>
-                <td>".$row['certifying_physician']."</td>
-                <td>".$row['marriage_status']."</td>
-                <td>".$row['date_of_death']."</td>
-                <td>".$row['date_of_funeral']."</td>
-                <td>".$row['place_of_death']."</td>
-                <td>".$row['total_footing_of_bill']."</td>
-                <td>".$row['charge_to']."</td>
+
+        //Make separate while loop for filling in rows
+        while($row = $result->fetch_assoc()) {
+            echo "<tr><td>".$row["name_first"]."</td>
+                      <td>".$row["name_middle"]."</td>
+                      <td>".$row["name_last"]."</td>
+                      <td>".$row["interment_at"]."</td>
+                      <td>".$row["cause_of_death"]."</td>
+                      <td>".$row["age_years"]."</td>
+                      <td>".$row["occupation"]."</td>
+                      <td>".$row["certifying_physician"]."</td>
+                      <td>".$row["marriage_status"]."</td>
+                      <td>".$row["date_of_death"]."</td>
+                      <td>".$row["date_of_funeral"]."</td>
+                      <td>".$row["place_of_death"]."</td>
+                      <td>".$row["total_footing_of_bill"]."</td>
+                      <td>".$row["charge_to"]."</td>
             </tr>";
         }
-
-    echo"</table>";
-
-    echo json_encode($result);
-    mysql_close($con);
+        echo "</table>";
+    }
+        else {
+            echo "0 results :(";
+    }
+    $conn->close();
     ?>
 
 </body>
