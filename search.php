@@ -110,7 +110,7 @@
                     <th>Date Of Funeral</th>
                     <th>Location Of Death</th>
                     <th>Total Cost</th>
-                    <th><Charged To</th>
+                    <th>Charged To</th>
                  </tr>";
 
         while($row = $result->fetch_assoc()) {
