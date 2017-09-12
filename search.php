@@ -53,6 +53,16 @@
     $total_footing_of_bill=$_GET['total_footing_of_bill'];
     $charge_to=$_GET['charge_to'];
 
+
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    echo "Connected successfully";
+    
     //Creating connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -114,10 +124,10 @@
                       <td>".$row["charge_to"]."</td>
             </tr>";
         }
-        echo "</table>";
+            echo "</table>";
     }
         else {
-            echo "0 results :(";
+            echo "0 results";
     }
     $conn->close();
     ?>
