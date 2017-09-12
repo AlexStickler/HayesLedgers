@@ -1,13 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
-<head>
   <meta charset="utf-8">
+<head>
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="index.css" />
-  <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
-  <script type="text/javascript" src="responsive-tables.js"></script>
 </head>
 
 <body>
@@ -33,10 +30,6 @@
   <br>
 
     <?php
-    $servername = "localhost";
-    $username = "ernest";
-    $password = "xroads66";
-    $dbname = "hayesLedgers";
 
     $name_first=$_GET['name_first'];
     $name_middle=$_GET['name_middle'];
@@ -53,22 +46,17 @@
     $total_footing_of_bill=$_GET['total_footing_of_bill'];
     $charge_to=$_GET['charge_to'];
 
+    $servername = "localhost";
+    $username = "ernest";
+    $password = "xroads66";
+    $dbname = "hayesLedgers";
 
-    // Create connection
-    $conn = mysqli_connect($servername, $username, $password);
-
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    echo "Connected successfully";
-    
     //Creating connection
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     //Checking connection
     if ($conn->connect_error) {
-        die("Could not connect: " . $conn->connect_error;
+        die("Connection failed: " . $conn->connect_error);
     }
 
     //Create sql query to get results based on input ordered by age lowest to highest
@@ -83,51 +71,49 @@
     //result = connection to the database w/ query as input
     $result = $conn->query($sql);
 
-    //While there are still rows left to be printed that match the query
-    if($result->num_rows > 0) {
-        //Print out table, with headers of each searchable category
-        echo "<br><br><br><table class="responsive">
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Middle Name</th>
-                <th>Last Name</th>
-                <th>Cemetery</th>
-                <th>Cause Of Death</th>
-                <th>Age</th>
-                <th>Occupation</th>
-                <th>Name Of Physician</th>
-                <th>Marital Status</th>
-                <th>Date Of Death</th>
-                <th>Date Of Funeral</th>
-                <th>Location Of Death</th>
-                <th>Total Cost</th>
-                <th><Charged To</th>
-            </tr>
-        </thead>";
+    if ($result->num_rows > 0) {
 
-        //Make separate while loop for filling in rows
+        //Print out table, with headers of each searchable category
+        echo "<table>
+                 <tr>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Cemetery</th>
+                    <th>Cause Of Death</th>
+                    <th>Age</th>
+                    <th>Occupation</th>
+                    <th>Name Of Physician</th>
+                    <th>Marital Status</th>
+                    <th>Date Of Death</th>
+                    <th>Date Of Funeral</th>
+                    <th>Location Of Death</th>
+                    <th>Total Cost</th>
+                    <th><Charged To</th>
+                 </tr>";
+
         while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["name_first"]."</td>
-                      <td>".$row["name_middle"]."</td>
-                      <td>".$row["name_last"]."</td>
-                      <td>".$row["interment_at"]."</td>
-                      <td>".$row["cause_of_death"]."</td>
-                      <td>".$row["age_years"]."</td>
-                      <td>".$row["occupation"]."</td>
-                      <td>".$row["certifying_physician"]."</td>
-                      <td>".$row["marriage_status"]."</td>
-                      <td>".$row["date_of_death"]."</td>
-                      <td>".$row["date_of_funeral"]."</td>
-                      <td>".$row["place_of_death"]."</td>
-                      <td>".$row["total_footing_of_bill"]."</td>
-                      <td>".$row["charge_to"]."</td>
-            </tr>";
+            echo
+                "<tr>
+                    <td>".$row["name_first"]."</td>
+                    <td>".$row["name_middle"]."</td>
+                    <td>".$row["name_last"]."</td>
+                    <td>".$row["interment_at"]."</td>
+                    <td>".$row["cause_of_death"]."</td>
+                    <td>".$row["age_years"]."</td>
+                    <td>".$row["occupation"]."</td>
+                    <td>".$row["certifying_physician"]."</td>
+                    <td>".$row["marriage_status"]."</td>
+                    <td>".$row["date_of_death"]."</td>
+                    <td>".$row["date_of_funeral"]."</td>
+                    <td>".$row["place_of_death"]."</td>
+                    <td>".$row["total_footing_of_bill"]."</td>
+                    <td>".$row["charge_to"]."</td>
+                </tr>";
         }
-            echo "</table>";
-    }
-        else {
-            echo "0 results";
+        echo "</table>";
+    } else {
+        echo "0 results";
     }
     $conn->close();
     ?>
