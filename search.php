@@ -27,7 +27,7 @@
     </nav>
   </header>
 
-  <br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br>
 
     <?php
 
@@ -60,14 +60,20 @@
     }
 
     //Create sql query to get results based on input ordered by age lowest to highest
-    $sql = "SELECT * FROM l1 WHERE name_first LIKE '%$name_first%' AND name_middle
-        LIKE '%$name_middle%' AND name_last LIKE '%$name_last%' AND interment_at
-        LIKE '%$interment_at%' AND cause_of_death LIKE '%$cause_of_death%' AND age_years
-        LIKE '%$age_years%' AND occupation LIKE '%$occupation%' AND certifying_physician
-        LIKE '%$certifying_physician%' AND marriage_status LIKE '%$marriage_status%' AND date_of_death
-        LIKE '%$date_of_death%' AND date_of_funeral LIKE '%$date_of_funeral%' AND place_of_death
-        LIKE '%$place_of_death%' AND total_footing_of_bill LIKE '%$total_footing_of_bill%' AND charge_to
-        LIKE '%$charge_to%' ORDER BY age_years ASC";
+    $sql = "SELECT * FROM l1 WHERE name_first LIKE '%$name_first%' OR name_first LIKE ''
+        AND name_middle LIKE '%$name_middle%' OR name_middle LIKE ''
+        AND name_last LIKE '%$name_last%' OR name_last LIKE ''
+        AND interment_at LIKE '%$interment_at%' OR interment_at LIKE ''
+        AND cause_of_death LIKE '%$cause_of_death%' OR cause_of_death LIKE ''
+        AND age_years LIKE '%$age_years%' OR age_years LIKE ''
+        AND occupation LIKE '%$occupation%' OR occupation LIKE ''
+        AND certifying_physician LIKE '%$certifying_physician%' OR certifying_physician LIKE ''
+        AND marriage_status LIKE '%$marriage_status%' OR marriage_status LIKE ''
+        AND date_of_death LIKE '%$date_of_death%' OR date_of_death LIKE ''
+        AND date_of_funeral LIKE '%$date_of_funeral%' OR date_of_funeral LIKE ''
+        AND place_of_death LIKE '%$place_of_death%' OR place_of_death LIKE ''
+        AND total_footing_of_bill LIKE '%$total_footing_of_bill%' OR total_footing_of_bill LIKE ''
+        AND charge_to LIKE '%$charge_to%' OR charge_to LIKE '' ORDER BY age_years ASC";
 
     //result = connection to the database w/ query as input
     $result = $conn->query($sql);

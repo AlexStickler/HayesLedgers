@@ -6,8 +6,6 @@
     <title>Hayes Funeral Home Ledgers</title>
     <!-- Link to the search page stylesheet -->
     <link rel="stylesheet" href="browse.css" type="text/css" media="all"/>
-    <link type="text/css" media="screen" rel="stylesheet" href="responsive-tables.css" />
-    <script type="text/javascript" src="responsive-tables.js"></script>
 </head>
 
 <body>
@@ -39,8 +37,6 @@
 
 <form action="search.php" method="get">
 
-    <div class="section goup">
-	<div class = "col results_1_of_2">
 	    <label for="name_first">First Name: </label>
 	    <input type="search"
 	       name="name_first"
@@ -67,9 +63,6 @@
            autofocus
            />
 <br><br>
-	</div>
-
-	<div class = "col results_1_of_2">
 
         <label for="interment_at">Cemetery: </label>
         <input type="search"
@@ -120,7 +113,7 @@
         <input type="search"
             name="marriage_status"
             id="marriage_status"
-            placeholder=""
+            placeholder="Single, Married, Widow"
             autofocus
             />
 <br><br>
@@ -129,18 +122,18 @@
         <input type="search"
             name="date_of_death"
             id="date_of_death"
-            placeholder=""
+            placeholder="YYYY-MM-DD"
             autofocus
             />
 <br><br>
 
         <label for="date_of_funeral">Date of Funeral: </label>
         <input type="search"
-        name="date_of_funeral"
-        id="date_of_funeral"
-        placeholder=""
-        autofocus
-        />
+            name="date_of_funeral"
+            id="date_of_funeral"
+            placeholder="YYYY-MM-DD"
+            autofocus
+            />
 <br><br>
 
         <label for="place_of_death">Location of Death: </label>
@@ -169,9 +162,6 @@
             autofocus
             />
 <br><br>
-
-    </div>
-    </div>
 
     <button  type="submit">Search</button>
 
