@@ -6,45 +6,7 @@
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="search.css" />
-  <!-- Table Style -->
-  <!--<style>
 
-    #ledgers td {
-        text-align: left;
-        padding: 8px;
-    }
-
-    #ledgers {
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    #ledgers tr:nth-child(even){background-color: #f2f2f2;}
-
-    #ledgers tr:hover {background-color: #ddd;}
-
-    #ledgers th {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        text-align: left;
-        background-color: #b22222;
-        color: white;
-    }
-</style>-->
-  <!--Stuff for responsive Zurb table -->
-  <!-- <link rel="stylesheet" href="stylesheets/globals.css">
-  <link rel="stylesheet" href="stylesheets/typography.css">
-  <link rel="stylesheet" href="stylesheets/grid.css">
-  <link rel="stylesheet" href="stylesheets/ui.css">
-  <link rel="stylesheet" href="stylesheets/forms.css">
-  <link rel="stylesheet" href="stylesheets/orbit.css">
-  <link rel="stylesheet" href="stylesheets/reveal.css">
-  <link rel="stylesheet" href="stylesheets/mobile.css">
-  <link rel="stylesheet" href="stylesheets/app.css">
-  <link rel="stylesheet" href="responsive-tables.css">
-  <script src="javascripts/jquery.min.js"></script>
-  <script src="responsive-tables.js"></script> -->
 </head>
 
 <body>
