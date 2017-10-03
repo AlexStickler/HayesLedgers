@@ -1,0 +1,20 @@
+{
+  "name": "DPS2017",
+  "version": "1.0.0",
+  "description": "",
+  "main": "responsive-tables.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexStickler/DPS2017.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexStickler/DPS2017/issues"
+  },
+  "homepage": "https://github.com/AlexStickler/DPS2017#readme"
+}
