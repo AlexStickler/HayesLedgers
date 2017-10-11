@@ -116,7 +116,7 @@ img {
 #info {
 	width: 70%;
 	display: inline-block;
-	margin-left: 15px;
+	margin-left: 15%;
 }
 
 #info h3 {
@@ -128,17 +128,18 @@ img {
 }
 
 #info p {
-    list-style-type: none;
+  list-style-type: none;
 	background-color: #eee;
 	border: 1px solid #666;
 	padding: 15px;
+	text-align:center;
 }
 
 #features {
 	display: inline-block;
 	width: 70%;
-	margin-left: 15px;
-	margin-bottom: 30px
+	margin-left: 15%;
+	margin-bottom: 30px;
 }
 
 #features h3 {
