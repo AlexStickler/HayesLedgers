@@ -6,11 +6,12 @@
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="search.css" />
-  <!-- Bootstrap stuff -->
+  <!-- Bootstrap stuff
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/no-more-tables.css">
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
-
+  -->
+  <!-- Style for bootstrap, working on compatibility
   <style>
       body { padding-top: 60px; }
   	  table { width: 100%; }
@@ -19,6 +20,7 @@
   	  h2, h3 {margin-top: 1em;}
   	  section {padding-top: 40px;}
     </style>
+  -->
 
 </head>
 
@@ -97,24 +99,24 @@
 
         //Print out table, with headers of each searchable category
             echo"
-              <section id="no-more-tables">
-                <table class="table-bordered table-striped table-condensed cf">
-                  <thead class="cf">
+              <section>
+                <table>
+                  <thead>
                     <tr>
-                        <th>First Name</th>
-                        <th>Middle Name</th>
-                        <th>Last Name</th>
-                        <th>Cemetery</th>
-                        <th>Cause Of Death</th>
-                        <th class="numeric">Age</th>
-                        <th>Occupation</th>
-                        <th>Name Of Physician</th>
-                        <th>Marital Status</th>
-                        <th class="numeric">Date Of Death</th>
-                        <th class="numeric">Date Of Funeral</th>
-                        <th>Location Of Death</th>
-                        <th class="numeric">Total Cost</th>
-                        <th>Charged To</th>
+                      <th>First Name</th>
+                      <th>Middle Name</th>
+                      <th>Last Name</th>
+                      <th>Cemetery</th>
+                      <th>Cause Of Death</th>
+                      <th>Age</th>
+                      <th>Occupation</th>
+                      <th>Name Of Physician</th>
+                      <th>Marital Status</th>
+                      <th>Date Of Death</th>
+                      <th>Date Of Funeral</th>
+                      <th>Location Of Death</th>
+                      <th>Total Cost</th>
+                      <th>Charged To</th>
                     </tr>
                   </thead>";
 
@@ -122,25 +124,24 @@
             echo
                 "<tbody>
                   <tr>
-                    <td data-title="First Name">".$row["name_first"]."</td>
-                    <td data-title="Middle Name">".$row["name_middle"]."</td>
-                    <td data-title="Last Name">".$row["name_last"]."</td>
-                    <td data-title="Cemetery">".$row["interment_at"]."</td>
-                    <td data-title="Cause Of Death">".$row["cause_of_death"]."</td>
-                    <td data-title="Age">".$row["age_years"]."</td>
-                    <td data-title="Occupation">".$row["occupation"]."</td>
-                    <td data-title="Name Of Physician">".$row["certifying_physician"]."</td>
-                    <td data-title="Marital Status">".$row["marriage_status"]."</td>
-                    <td data-title="Date Of Death">".$row["date_of_death"]."</td>
-                    <td data-title="Date Of Funeral">".$row["date_of_funeral"]."</td>
-                    <td data-title="Location Of Death">".$row["place_of_death"]."</td>
-                    <td data-title="Total Cost">".$row["total_footing_of_bill"]."</td>
-                    <td data-title="Charged To">".$row["charge_to"]."</td>
+                    <td>".$row["name_first"]."</td>
+                    <td>".$row["name_middle"]."</td>
+                    <td>".$row["name_last"]."</td>
+                    <td>".$row["interment_at"]."</td>
+                    <td>".$row["cause_of_death"]."</td>
+                    <td>".$row["age_years"]."</td>
+                    <td>".$row["occupation"]."</td>
+                    <td>".$row["certifying_physician"]."</td>
+                    <td>".$row["marriage_status"]."</td>
+                    <td>".$row["date_of_death"]."</td>
+                    <td>".$row["date_of_funeral"]."</td>
+                    <td>".$row["place_of_death"]."</td>
+                    <td>".$row["total_footing_of_bill"]."</td>
+                    <td>".$row["charge_to"]."</td>
                   </tr>
                 </tbody>";
         }
-        echo "</table>
-        </section>";
+        echo "</table>";
     } else {
         echo "0 results";
     }
