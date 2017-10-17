@@ -6,12 +6,12 @@
   <title>Hayes Funeral Home Ledgers</title>
   <!-- Link to the search page stylesheet -->
   <link type="text/css" media="all" rel="stylesheet" href="search.css" />
-  <!-- Bootstrap stuff
+  <!-- Boostrap -->
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/no-more-tables.css">
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
-  -->
-  <!-- Style for bootstrap, working on compatibility
+
+  <!-- Style for bootstrap
   <style>
       body { padding-top: 60px; }
   	  table { width: 100%; }
@@ -19,8 +19,8 @@
   	  td.numeric, th.numeric { text-align: right; }
   	  h2, h3 {margin-top: 1em;}
   	  section {padding-top: 40px;}
-    </style>
-  -->
+  </style>
+-->
 
 </head>
 
@@ -98,10 +98,10 @@
     if ($result->num_rows > 0) {
 
         //Print out table, with headers of each searchable category
-            echo"
+            echo'
               <section>
-                <table>
-                  <thead>
+                <table class="table-bordered table-striped table-condensed cf">
+                  <thead class="cf">
                     <tr>
                       <th>First Name</th>
                       <th>Middle Name</th>
@@ -118,11 +118,11 @@
                       <th>Total Cost</th>
                       <th>Charged To</th>
                     </tr>
-                  </thead>";
+                  </thead>';
 
         while($row = $result->fetch_assoc()) {
             echo
-                "<tbody>
+                '<tbody>
                   <tr>
                     <td>".$row["name_first"]."</td>
                     <td>".$row["name_middle"]."</td>
@@ -139,11 +139,11 @@
                     <td>".$row["total_footing_of_bill"]."</td>
                     <td>".$row["charge_to"]."</td>
                   </tr>
-                </tbody>";
+                </tbody>';
         }
-        echo "</table>";
+        echo '</table>';
     } else {
-        echo "0 results";
+        echo '0 results';
     }
     $conn->close();
     ?>
