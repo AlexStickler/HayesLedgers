@@ -11,7 +11,7 @@
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
 
-  
+
   <style>
       body { padding-top: 60px; }
   	  table { width: 100%; }
@@ -99,7 +99,7 @@
 
         //Print out table, with headers of each searchable category
             echo'
-              <section>
+              <section id="no-more-tables">
                 <table class="table-bordered table-striped table-condensed cf">
                   <thead class="cf">
                     <tr>
@@ -141,7 +141,8 @@
                   </tr>
                 </tbody>';
         }
-        echo '</table>';
+        echo '</table>
+        </section>';
     } else {
         echo '0 results';
     }
