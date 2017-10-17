@@ -99,26 +99,27 @@
 
         //Print out table, with headers of each searchable category
             echo'
-              <section id="no-more-tables">
-                <table class="table-bordered table-striped table-condensed cf">
-                  <thead class="cf">
-                    <tr>
-                      <th>First Name</th>
-                      <th>Middle Name</th>
-                      <th>Last Name</th>
-                      <th>Cemetery</th>
-                      <th>Cause Of Death</th>
-                      <th class="numeric">Age</th>
-                      <th>Occupation</th>
-                      <th>Name Of Physician</th>
-                      <th>Marital Status</th>
-                      <th>Date Of Death</th>
-                      <th>Date Of Funeral</th>
-                      <th>Location Of Death</th>
-                      <th class="numeric">Total Cost</th>
-                      <th>Charged To</th>
-                    </tr>
-                  </thead>';
+              <div class="container-fluid">
+                <section id="no-more-tables">
+                  <table class="table-bordered table-striped table-condensed cf">
+                    <thead class="cf">
+                      <tr>
+                        <th>First Name</th>
+                        <th>Middle Name</th>
+                        <th>Last Name</th>
+                        <th>Cemetery</th>
+                        <th>Cause Of Death</th>
+                        <th class="numeric">Age</th>
+                        <th>Occupation</th>
+                        <th>Name Of Physician</th>
+                        <th>Marital Status</th>
+                        <th>Date Of Death</th>
+                        <th>Date Of Funeral</th>
+                        <th>Location Of Death</th>
+                        <th class="numeric">Total Cost</th>
+                        <th>Charged To</th>
+                      </tr>
+                    </thead>';
 
         while($row = $result->fetch_assoc()) {
             echo
@@ -142,7 +143,8 @@
                 </tbody>';
         }
         echo '</table>
-        </section>';
+          </section>
+        </div>';
     } else {
         echo '0 results';
     }
