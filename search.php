@@ -11,7 +11,7 @@
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
 
-  <!-- Style for bootstrap
+  
   <style>
       body { padding-top: 60px; }
   	  table { width: 100%; }
@@ -20,7 +20,7 @@
   	  h2, h3 {margin-top: 1em;}
   	  section {padding-top: 40px;}
   </style>
--->
+
 
 </head>
 
