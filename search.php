@@ -124,7 +124,7 @@
             echo
                 '<tbody>
                   <tr>
-                    <td data-title='First Name'>".$row["name_first"]."</td>
+                    <td data-title="First Name">'.$row["name_first"].'</td>
                     <td data-title="Middle Name">".$row["name_middle"]."</td>
                     <td data-title="Last Name">".$row["name_last"]."</td>
                     <td data-title="Cemetery">".$row["interment_at"]."</td>
