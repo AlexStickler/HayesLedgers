@@ -9,13 +9,12 @@
   <!-- Boostrap -->
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/no-more-tables.css">
   <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link type="text/css" media="all" rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css">
 
 
   <style>
       body { padding-top: 60px; }
   	  table { width: 100%; }
-  	  td, th {text-align: left; white-space: nowrap;}
+  	  td, th {text-align: left; white-space: nowrap; padding: 3px 10px 3px 10px;}
   	  td.numeric, th.numeric { text-align: right; }
   	  h2, h3 {margin-top: 1em;}
   	  section {padding-top: 40px;}
