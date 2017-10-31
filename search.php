@@ -32,7 +32,7 @@
         background-color: #d3d3d3;
         color: black;
       }
-      tr:hover tr{
+      tr:hover td{
         background-color:#333;
         color: #fff;
       }
