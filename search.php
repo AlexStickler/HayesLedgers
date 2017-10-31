@@ -33,6 +33,7 @@
         color: black;
       }
       tr:hover {
+        font-weight: bold;
         background-color: #333;
         color: #fff;
       }
