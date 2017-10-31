@@ -29,7 +29,7 @@
         color: #fff;
       }
       tr {
-        background-color: #d3d3d3;
+        background-color: #444;
         color: black;
       }
       tr:hover td{
@@ -37,7 +37,7 @@
         color: #fff;
       }
       td {
-        background-color: #d3d3d3;
+        background-color: #444;
         color: black;
       }
       td:hover {
