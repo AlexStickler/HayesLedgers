@@ -28,11 +28,11 @@
         background-color: #b22222;
         color: #fff;
       }
-      td {
+      tr {
         background-color: #d3d3d3;
         color: black;
       }
-      td:hover {
+      tr:hover {
         background-color:#333;
         color: #fff;
       }
