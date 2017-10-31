@@ -33,16 +33,16 @@
         color: black;
       }
       tr:hover td{
-        background-color:#333;
-        color: #fff;
+        background-color:#fff;
+        color: #444;
       }
       td {
         background-color: #444;
-        color: black;
+        color: #fff;
       }
       td:hover {
-        background-color: #333;
-        color: #fff;
+        background-color: #fff;
+        color: #black;
       }
   	  td.numeric, th.numeric {
   	    text-align: right;
