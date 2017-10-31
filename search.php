@@ -29,20 +29,20 @@
         color: #fff;
       }
       tr {
-        background-color: #444;
+        background-color: #d3d3d3;
         color: black;
       }
-      tr:hover td{
-        background-color:#fff;
-        color: #444;
-      }
-      td {
-        background-color: #444;
+      tr:hover tr{
+        background-color:#333;
         color: #fff;
       }
+      td {
+        background-color: #d3d3d3;
+        color: black;
+      }
       td:hover {
-        background-color: #fff;
-        color: #black;
+        background-color: #333;
+        color: #fff;
       }
   	  td.numeric, th.numeric {
   	    text-align: right;
