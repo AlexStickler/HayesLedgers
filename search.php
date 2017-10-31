@@ -29,11 +29,9 @@
         color: #fff;
       }
       td {
-        background-color: #d3d3d3;
         color: black;
       }
       tr:hover {
-        font-weight: bold;
         background-color: #333;
         color: #fff;
       }
