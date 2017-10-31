@@ -36,6 +36,14 @@
         background-color:#333;
         color: #fff;
       }
+      td {
+        background-color: #d3d3d3;
+        color: black;
+      }
+      td:hover {
+        background-color: #333;
+        color: #fff;
+      }
   	  td.numeric, th.numeric {
   	    text-align: right;
       }
