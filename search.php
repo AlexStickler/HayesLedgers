@@ -12,12 +12,40 @@
 
 
   <style>
-      body { padding-top: 60px; }
-  	  table { width: 100%; }
-  	  td, th {text-align: left; white-space: nowrap; padding: 3px 10px 3px 10px;}
-  	  td.numeric, th.numeric { text-align: right; }
-  	  h2, h3 {margin-top: 1em;}
-  	  section {padding-top: 40px;}
+      body {
+        padding-top: 60px;
+        background-color: #fffff0;
+      }
+  	  table {
+  	    width: 100%;
+      }
+  	  td, th {
+  	    text-align: left;
+        white-space: nowrap;
+        padding: 3px 10px;
+      }
+      th {
+        background-color: #b22222;
+        color: #fff;
+      }
+      td {
+        background-color: #d3d3d3;
+        color: black;
+      }
+      tr:hover {
+        font-weight: bold;
+        background-color: #333;
+        color: #fff;
+      }
+  	  td.numeric, th.numeric {
+  	    text-align: right;
+      }
+  	  h2, h3 {
+  	    margin-top: 1em;
+      }
+  	  section {
+  	    padding-top: 40px;
+      }
   </style>
 
 
