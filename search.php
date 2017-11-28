@@ -22,7 +22,7 @@
   	  td, th {
   	    text-align: left;
         white-space: nowrap;
-        padding: 3px 1px;
+        padding: 1px 3px;
       }
       th {
         background-color: #b22222;
