@@ -162,3 +162,8 @@ img {
 	padding: 15px;
 	text-align: center;
 }
+
+.img-center {
+	display: block;
+	margin: 0 auto;
+}
