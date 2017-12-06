@@ -111,8 +111,8 @@
     }
 
     //Create sql query to get results based on input ordered by age lowest to highest
-    $sql = "SELECT * FROM l1 WHERE name_first LIKE '$name_first%' OR name_first LIKE ''
-        
+    $sql = "SELECT * FROM l1 WHERE name_first LIKE '%$name_first%' OR name_first LIKE ''
+
         ORDER BY age_years ASC";
 
     //result = connection to the database w/ query as input
