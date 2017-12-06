@@ -110,26 +110,6 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    if(isset($row['submit'])) {
-      $fields = array('name_first', 'name_middle', 'name_last', 'interment_at', 'cause_of_death', 'age_years',
-      'occupation', 'certifying_physician', 'marriage_status', 'date_of_death', 'date_of_funeral', 'place_of_death', 'total_footing_of_bill',
-      'charge_to');
-      $conditions = array();
-
-      foreach($fields as $field) {
-        if(isset($row[$field]) && $row[$field] != '') {
-          $conditions[] = "'$field' LIKE '%" . mysqli_real_escape_string($row[$field]) . "%'";
-        }
-      }
-
-      $query = "SELECT * FROM l1 ";
-      if(count($conditions) > 0) {
-        $query .= "WHERE " . implode (' AND ', $conditions);
-      }
-
-      $result = mysqli_query($query)
-    }
-
     //Create sql query to get results based on input ordered by age lowest to highest
     $sql = "SELECT * FROM l1 WHERE name_first LIKE '%$name_first%' OR name_first LIKE ''
         AND name_middle LIKE '%$name_middle%' OR name_middle LIKE ''
