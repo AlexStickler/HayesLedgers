@@ -124,7 +124,7 @@
     AND date_of_funeral LIKE '%$date_of_funeral%' OR date_of_funeral LIKE ''
     AND place_of_death LIKE '%$place_of_death%' OR place_of_death LIKE ''
     AND total_footing_of_bill LIKE '%$total_footing_of_bill%' OR total_footing_of_bill LIKE ''
-    AND charge_to LIKE '%$charge_to%' OR charge_to LIKE '') ORDER BY age_years ASC";
+    AND charge_to LIKE '%$charge_to%' OR charge_to LIKE '' ORDER BY age_years ASC";
 
     //result = connection to the database w/ query as input
     $result = $conn->query($sql);
