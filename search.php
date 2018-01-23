@@ -97,13 +97,9 @@
     $total_footing_of_bill=$_GET['total_footing_of_bill'];
     $charge_to=$_GET['charge_to'];
 
-    $servername = "localhost";
-    $username = "ernest";
-    $password = "xroads66";
-    $dbname = "hayesLedgers";
-
     //Creating connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $db = parse_ini_file('cnf/cnf.ini');
+    $conn = new mysqli('localhost',$db['un'],$db['pwrd'],$db['dbname']);
 
     //Checking connection
     if ($conn->connect_error) {
