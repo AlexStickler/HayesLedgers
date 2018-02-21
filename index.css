@@ -55,7 +55,7 @@ main {
 
 #navbar ul li {
 	border-right: 1px solid #bbb;
-	width: 33%;
+	width: 30%;
 }
 
 #navbar ul li:last-child {
