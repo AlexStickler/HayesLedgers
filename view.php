@@ -27,7 +27,7 @@
 		</ul>
 		</nav>
 	</header>
-	<br><br><br><br><br>
+	<br>
 	
 	<main>
 
@@ -38,7 +38,7 @@
 		</script>
 
 
-		<button onclick="goBack()">Back to Search</button>
+		<button onclick="goBack()">Back to Search Results</button>
 
 		<?php
 
