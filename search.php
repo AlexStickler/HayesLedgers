@@ -54,10 +54,7 @@
   	    padding-top: 40px;
       }
   </style>
-
-
 </head>
-
 <body>
   <header>
     <div id="banner">
@@ -71,7 +68,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a class="active" href="search.html">Search</a></li>
-        <li><a href="map2">Map</a></li>
+        <li><a href="Hayes_map/index.html">Map</a></li>
       </ul>
     </nav>
   </header>
