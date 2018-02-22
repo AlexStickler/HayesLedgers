@@ -56,7 +56,7 @@ main {
 #navbar ul li {
 	float: left;
 	border-right: 1px solid #bbb;
-	width: 20%;
+	width: 33.33333%;
 }
 
 #navbar ul li:last-child {
